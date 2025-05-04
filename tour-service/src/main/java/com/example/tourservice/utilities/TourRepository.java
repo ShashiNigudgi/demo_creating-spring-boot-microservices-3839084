@@ -19,6 +19,9 @@ public class TourRepository {
         }
         return tour;
     }
+    public void delete(int number){
+        tours.remove(number);
+    }
 
     public List<Tour> findAll() {
         return tours;

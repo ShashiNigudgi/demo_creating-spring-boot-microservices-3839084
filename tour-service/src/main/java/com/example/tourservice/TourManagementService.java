@@ -22,4 +22,9 @@ public class TourManagementService {
     public Tour createTour(String title, Integer price, Boolean isKidFriendly) {
         return tourRepository.save(new Tour(title, price, isKidFriendly));
     }
+
+    public void deleteTour(int number){
+        tourRepository.delete(number);
+        System.out.println("Delete success");
+    }
 }
